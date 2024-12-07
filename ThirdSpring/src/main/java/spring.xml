@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+      <bean id="lab2" class="com.jbk.Library2">
+           <property name="bookList">
+                <list>
+                      <ref bean="book1"/>
+                      <ref bean="book2"/>
+                </list> 
+            </property>
+       </bean>
+      
+    <bean id="lab1" class="com.jbk.Library" autowire="byType">
+          <property name="LabName" value="MyLab"/>
+         <!--   <property name="book" ref="book1"/> -->
+    </bean>
+
+
+	<bean id="book1" class="com.jbk.Book" primary="true">
+	    <property name="bookName" value="chava"/>
+	    <property name="price" value="600"/>
+	   
+	</bean>
+	
+	<bean id="book2" class="com.jbk.Book">
+	      <constructor-arg index="0" value="APJ Abdul"/>
+	      <constructor-arg index="1" value="1000" />
+	</bean>
+	
+	<bean id="auth1" class="com.jbk.Author">
+	   <property name="AuthName" value="xyz"/>
+	</bean>
+	
+</beans>
