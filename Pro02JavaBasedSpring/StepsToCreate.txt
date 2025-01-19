@@ -1,0 +1,12 @@
+->1.Create resources pkg
+  --create pakage resources 
+         --SpringConfigFile.java
+  --
+  
+-->2.In normal file We have download jar file
+   ---1)spring-beans
+   ---2)spring-core
+   ---3)spring-context
+   ---4)common-logging
+   ---5)spring-expression
+   ---6)spring aop
